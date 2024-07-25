@@ -5,10 +5,7 @@ Regex (Regular expressions), is a tool that can be used to help sync what you're
 ## Summary
 
 The purpose of HEX values is to pull a precise color located on the color wheel/block.
-
-Below is a breakdown of each section inside the given code:
-/^#?([a-f0-9]{6}|[a-f0-9]{3})$/ 
-
+Below is a breakdown of each section inside the given code:/^#?([a-f0-9]{6}|[a-f0-9]{3})$/ 
 as well as how to include input and what can be added to leverage less errors due to case sensitivity.
 
 
@@ -43,9 +40,7 @@ Character classes are components within our regular expression that tells us wha
 
 ### Flags
 Flags modify the behavior of the regex. The case-insensitive flag i makes the regex match letters regardless of case.
-
 with i at the end: /^#?([a-f0-9]{6}|[a-f0-9]{3})$/i
-
 if the i is not included, it wont recognize the input due to it having to be the same
 
 ### Grouping and Capturing
