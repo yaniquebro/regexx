@@ -32,29 +32,35 @@ as well as how to include input and what can be added to leverage less errors du
 The Anchors in a regex string are the ^ and $. The ^ will represent the start of the string, and the $ represents the end. Everything in between the ^ and $ will represent what the regex is looking for. Anchors do not match any character at all. Instead, they match a position before, after, or between characters.
 
 ### Quantifiers
-Quantifiers are used to communicate how many characters will be matched. By default, quantifiers match with as many characters as possible. If the ",+,?,{}" characters are found within regular expressions, they are considered quantifiers. The + indicates that the element may be repeated 1 or more times. The ? indicates that the element is optional, matching either 0 or 1 occurrences. The {n} indicates a quantity, either a single number or a range of numbers.
+Quantifiers are used to communicate how many characters will be matched. By default, quantifiers match with as many characters as possible. If the ",+,?,{}" characters are found within regular expressions, they are considered quantifiers. The + indicates that the element may be repeated 1 or more times. The ? indicates that the element is optional, matching either 0 or 1 occurrences. The {n} indicates a quantity, in this case {6} and {3}.
 
 ### OR Operator
 /^#?([a-f0-9]{6}|[a-f0-9]{3})$/ 
-The "OR" operator within a regular expression is defined using the | element. The OR operator indicates that it could use either of the components that we are separating with the |. For our hex value regular expression we have ([a-f0-9]{6}|[a-f0-9]{3}). Note the OR operator separating these 2 components. This means that our hex value could either be 6 characters [a-f0-9]{6} or 3 characters [a-f0-9]{3}.
+The "OR" operator within a regular expression is defined using the | element. The OR operator indicates that it could use either of the components that we are separating with the |. For our hex value regular expression we have ([a-f0-9]{6}|[a-f0-9]{3}). This means that our hex value could either be 6 characters [a-f0-9]{6} or 3 characters [a-f0-9]{3}.
 
 ### Character Classes
 Character classes are components within our regular expression that tells us what type of characters to expect. In our example, our character classes are confined within brackets []. [a-f0-9]  a-f searches for letters a-f, while 0-9 searches for digits 0-9.
 
 ### Flags
+Flags modify the behavior of the regex. The case-insensitive flag i makes the regex match letters regardless of case.
 
+with i at the end: /^#?([a-f0-9]{6}|[a-f0-9]{3})$/i
+
+if the i is not included, it wont recognize the input due to it having to be the same
 
 ### Grouping and Capturing
-
+Parentheses () are used for grouping and capturing.
 
 ### Bracket Expressions
-
+Match any character in square brackets. For example [nN] [oO] matches no, nO, No, and NO. gr[ae]y matches both spellings of the word 'grey'; (gray and grey).
 
 ### Greedy and Lazy Match
+Greedy matching tries to match as much of the input text as possible. Lazy matching tries to match as little of the input text as possible.
 
+In the provided regex, all quantifiers are greedy by default ({6}, {3}).
 
 ### Boundaries
-
+Used to match positions in a string. In regex, the ^ and $ anchors mark the start and end boundaries of the string.
 
 ## Author
 
