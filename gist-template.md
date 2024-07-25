@@ -1,10 +1,16 @@
-# Title (replace with your title)
+# Matching Hex Values
 
-Introductory paragraph (replace this with your text)
+Regex (Regular expressions), is a tool that can be used to help sync what you're searching via text. Below you will fin a breakdown where hexidecimal (HEX), values can be matched to find certain colors you may be searching for, including minimizing errors regarding cap sensitive input.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+The purpose of HEX values is to pull a precise color located on the color wheel/block.
+
+Below is a breakdown of each section inside the given code:
+/^#?([a-f0-9]{6}|[a-f0-9]{3})$/ 
+
+as well as how to include input and what can be added to leverage less errors due to case sensitivity.
+
 
 ## Table of Contents
 
@@ -23,27 +29,33 @@ Briefly summarize the regex you will be describing and what you will explain. In
 ## Regex Components
 
 ### Anchors
+The Anchors in a regex string are the ^ and $. The ^ will represent the start of the string, and the $ represents the end. Everything in between the ^ and $ will represent what the regex is looking for. Anchors do not match any character at all. Instead, they match a position before, after, or between characters.
 
 ### Quantifiers
+Quantifiers are used to communicate how many characters will be matched. By default, quantifiers match with as many characters as possible. If the ",+,?,{}" characters are found within regular expressions, they are considered quantifiers. The + indicates that the element may be repeated 1 or more times. The ? indicates that the element is optional, matching either 0 or 1 occurrences. The {n} indicates a quantity, either a single number or a range of numbers.
 
 ### OR Operator
+/^#?([a-f0-9]{6}|[a-f0-9]{3})$/ 
+The "OR" operator within a regular expression is defined using the | element. The OR operator indicates that it could use either of the components that we are separating with the |. For our hex value regular expression we have ([a-f0-9]{6}|[a-f0-9]{3}). Note the OR operator separating these 2 components. This means that our hex value could either be 6 characters [a-f0-9]{6} or 3 characters [a-f0-9]{3}.
 
 ### Character Classes
+Character classes are components within our regular expression that tells us what type of characters to expect. In our example, our character classes are confined within brackets []. [a-f0-9]  a-f searches for letters a-f, while 0-9 searches for digits 0-9.
 
 ### Flags
 
+
 ### Grouping and Capturing
+
 
 ### Bracket Expressions
 
+
 ### Greedy and Lazy Match
+
 
 ### Boundaries
 
-### Back-references
-
-### Look-ahead and Look-behind
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+created by Yanique Brooks https://github.com/yaniquebro
